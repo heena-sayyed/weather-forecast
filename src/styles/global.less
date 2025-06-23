@@ -1,0 +1,67 @@
+@import "../styles/_colors";
+@import "../styles/_responsive";
+
+//buttons
+.button {
+  border: none;
+  border-radius: 8px;
+  font-size: 1.11rem;
+  padding: 1rem 1.111rem;
+}
+.primaryButton {
+  &:extend(.button);
+  background-color: @primary-button-color;
+  color: @text-color-dark;
+  &:hover {
+    background-color: lighten(@primary-button-color, 10%);
+    color: darken(@text-color-dark, 10%);
+  }
+}
+
+.secondaryButton {
+  &:extend(.button);
+  background-color: @secondary-button-color;
+  color: @white;
+  border: 1px solid transparent;
+  &:hover {
+    background-color: transparent;
+    border: 1px solid @secondary-button-color;
+    color: @text-color-dark;
+  }
+}
+
+
+//input text
+input[type="text"] {
+  border: none;
+  background-color: @input-bg-color;
+  border-radius: 8px;
+  padding: 0.7rem 1rem;
+  font-size: 1rem;
+  color: @text-color-dark;
+  transition: all 0.3s ease;
+
+  &:focus {
+    outline: none;
+    border: none;
+    box-shadow: 0 0 8px fade(@border-color, 40%);
+  }
+
+  &::placeholder {
+    color: lighten(@text-color-dark, 40%);
+  }
+}
+
+//error
+.error {
+   color: red;
+   font-size: 1rem;
+   margin-top: 0.5rem;
+ }
+
+//font-size
+@media @vw-sm {
+  h5 {
+    font-size: 1rem;
+  }
+}

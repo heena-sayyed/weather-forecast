@@ -1,0 +1,24 @@
+@import "../../styles/_colors";
+
+.searchHistoryContainer {
+  margin-top: 5rem;
+  .searchHistoryList {
+    margin-top: 2rem;
+    .searchHistoryListItem {
+      background-color: @bg-gray;
+      border: none;
+      padding: 1.11rem;
+
+      &:nth-child(even) {
+        background-color: @bg-light;
+      }
+
+      .searchHistoryText {
+        display: flex;
+        justify-content: space-between;
+        font-size: 1.11rem;
+        color: @text-color-dark;
+      }
+    }
+  }
+}

@@ -1,0 +1,25 @@
+@import "../../styles/_responsive";
+
+.searchBarContainer {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 5rem;
+  .searchBar {
+    width: 100%;
+    justify-content: space-between;
+    .searchBarText {
+      display: flex;
+      gap: 1rem;
+      padding: 0;
+    }
+    .searchBarButton {
+      text-align: right;
+      padding: 0;
+      @media @vw-sm {
+        text-align: left;
+        width: 100%;
+        margin-top: 1rem;
+      }
+    }
+  }
+}

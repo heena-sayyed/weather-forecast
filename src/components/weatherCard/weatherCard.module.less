@@ -1,0 +1,37 @@
+@import "../../styles/_colors";
+@import "../../styles/_responsive";
+
+.weatherCardContainer {;
+  background-color: @bg-color;
+  color: @text-color-dark;
+  margin-top: 5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* subtle shadow */
+  max-width: 60rem;
+  padding: 5rem;
+  @media @vw-sm {
+    padding: 2rem;
+  }
+
+  .cityNameBlock {
+    @media @vw-sm {
+      display: flex;
+      align-items: center;
+    }
+    .cityName {
+      display: flex;
+      &:before {
+        content: "";
+        background: url("../../assets/icons/location.svg") no-repeat;
+        width: 1.5rem;
+      }
+    }
+  }
+
+  .weatherIcon {
+    align-items: center;
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+  }
+}
