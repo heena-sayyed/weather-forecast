@@ -15,7 +15,7 @@ function SearchHistory({ history, onHistoryClick, onDelete }) {
                 {history.map((city, index) => (
                     <ListGroup.Item className={styles.searchHistoryListItem} key={index}>
                         <div className={styles.searchHistoryText}>
-                            <span
+                            <span className={styles.searchHistory}
                                 onClick={() => onHistoryClick(city)}
                             >
                                 {city}
